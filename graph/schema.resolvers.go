@@ -51,17 +51,6 @@ func (r *mutationResolver) UpdateBio(ctx context.Context, age int) (string, erro
 
 }
 
-// UpdateBio is the resolver for the UpdateBio field.
-//func (r *mutationResolver) UpdateBio(ctx context.Context, age int, input model.AddBio) (string, error) {
-//	err := r.BioRepository.UpdatePerson(&input, age)
-//	if err != nil {
-//		return "nil", err
-//	}
-//	successMessage := "successfully updated the bio"
-//
-//	return successMessage, nil
-//}
-
 // GetBio is the resolver for the GetBio field.
 func (r *queryResolver) GetBio(ctx context.Context, id int) (*model.BioData, error) {
 	bio, err := r.BioRepository.GetOnePerson(id)
